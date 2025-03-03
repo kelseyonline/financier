@@ -32,6 +32,8 @@ nextButton.addEventListener('click', function() {
         retirementAge = document.getElementById('response').value;
         console.log(retirementAge);
         document.getElementById('message').innerText = 'How much money did you just spend?';
+        var dollarSign = document.getElementById('dollarSign');
+        dollarSign.style.display = 'block';
         document.getElementById('nextButton').innerText = 'Shame me';
     } else if (clickCount === 3) {
         expense = document.getElementById('response').value;
