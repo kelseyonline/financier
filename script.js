@@ -4,12 +4,17 @@
 var age; 
 var retirementAge;
 var expense; 
+var horizon; 
 
 const ROR = .10;
 
-def future_value_calc(expense, ROR, horizon): 
-    future_value = expense * ((1 + ROR) ** horizon)
-    return future_value
+function futureValueCalc(expense, ROR, horizon) {
+    futureValue = expense * ((1 + ROR) ** horizon);
+    futureValue = Number(futureValue.toFixed(2));
+    futureValue = futureValue.toLocaleString();
+    return futureValue;
+}
+
 // Make function that changes message text 
 
 const nextButton = document.getElementById('nextButton');
@@ -25,16 +30,17 @@ nextButton.addEventListener('click', function() {
         document.getElementById('message').innerText = 'At what age do you expect to retire?';
     } else if (clickCount === 2) {
         retirementAge = document.getElementById('response').value;
-        console.log(age);
         console.log(retirementAge);
         document.getElementById('message').innerText = 'How much money did you just spend?';
         document.getElementById('nextButton').innerText = 'Shame me';
     } else if (clickCount === 3) {
         expense = document.getElementById('response').value;
-        console.log(age);
-        console.log(retirementAge);
         console.log(expense);
+        horizon = retirementAge - age; 
+        console.log(horizon);
+        futureValueCalc(expense, ROR, horizon);
         var resultMessage = document.getElementById('resultMessage');
+        document.getElementById('resultMessage').innerText = `If you had invested that $${expense}, it would have become $${futureValue} by the time you retired.`;
         resultMessage.style.display = 'block';
         clickCount = 0; 
     }
