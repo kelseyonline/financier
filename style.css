@@ -1,3 +1,17 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(211, 230, 214);
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 #resultMessage {
     display: none;
 }
