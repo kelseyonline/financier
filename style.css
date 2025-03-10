@@ -4,16 +4,68 @@
 
 body {
     background-color: rgb(211, 230, 214);
+    min-height: 100vh;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
 }
 
 #header {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    position: fixed;
+    margin: 0px;
+    text-align: center;
+    top: 0px;
+    font-size: 5em;
+    border: 1px solid red; 
+}
+
+#message { 
+    font-size: 4em;
+    text-align: center;
+    margin: 0px;
+    border: 1px solid red;
 }
 
 #resultMessage {
     display: none;
+}
+
+#survey { 
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 30px;
+    border: 1px solid blue;
+}
+
+#response-box { 
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#response { 
+    font-size: 4em;
+    border-radius: 12px;
+    border: 3px solid forestgreen; 
+}
+
+#nextButton-box { 
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nextButton {
+    font-size: 40px;
+    background-color: forestgreen;
+    border-radius: 12px;
+    border: 1px solid forestgreen;
 }
 
 #dollarSign {

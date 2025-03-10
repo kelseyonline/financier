@@ -7,13 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Financier</title>
 </head>
-    <h1 id="header">The Money Shamer</h1>
 <body>
+    <h1 id="header">The Money Shamer</h1>
+
     <div id="survey">
         <h3 id="message">How old are you?</h3>
         <p id="dollarSign">$</p>
-        <input type="text" id="response">
-        <button id="nextButton">Next</button>
+        <div id="response-box">
+            <input type="text" id="response">
+        </div>
+        <div id="nextButton-box">
+            <button id="nextButton">Next</button>
+        </div>
     </div>
 
     <h2 id="resultMessage">If you had invested that ${expense}, it would have become ${fv} by the time you retired.</h2>

@@ -8,6 +8,8 @@ var horizon;
 
 const ROR = .10;
 
+const inputField = document.getElementById("response")
+
 function futureValueCalc(expense, ROR, horizon) {
     futureValue = expense * ((1 + ROR) ** horizon);
     futureValue = Number(futureValue.toFixed(2));
@@ -28,10 +30,12 @@ nextButton.addEventListener('click', function() {
         age = document.getElementById('response').value;
         console.log(age);
         document.getElementById('message').innerText = 'At what age do you expect to retire?';
+        inputField.value = ""
     } else if (clickCount === 2) {
         retirementAge = document.getElementById('response').value;
         console.log(retirementAge);
         document.getElementById('message').innerText = 'How much money did you just spend?';
+        inputField.value = ""
         var dollarSign = document.getElementById('dollarSign');
         dollarSign.style.display = 'block';
         document.getElementById('nextButton').innerText = 'Shame me';
